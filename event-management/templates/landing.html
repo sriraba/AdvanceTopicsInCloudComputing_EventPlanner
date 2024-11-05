@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>event registration</title>
+      <!-- <link rel="stylesheet" href="static/css/bootstrap.min.css"> -->
+      <link rel="stylesheet" href="static/css/style.css">
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <div id="" class="Our">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Our Events Includes</h2>
+                     <span>We are happy to offer these services</span>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-4">                  
+                  <div class="Our_box">
+                     <form action="{{ url_for('eventRegister') }}" method="post">
+                     <input type="hidden" name="event" value="wedding">                     
+                     <i><img src="static/images/plan1.png" type="wedding" alt="#" id="wedding"  name="wedding" /></i>
+                    <br></br>
+                     <button style="background-color: whitesmoke;color: orangered;"
+                     type="submit">WEDDINGS</button>                     
+                    
+                  </form>
+                  </div>             
+
+
+               </div>
+               <div class="col-md-4">
+                  <div class="Our_box">
+                     <form action="{{ url_for('eventRegister') }}" method="post">
+                     <input type="hidden" name="event" value="birthday"> 
+                     <i><img src="static/images/plan2.png" alt="#"/></i>
+                     <br></br>
+                     <button style="background-color: whitesmoke;color: orangered;"
+                     type="submit">BIRTHDAYS</button>                    
+                  </div>
+               </div>
+               <!-- <div class="col-md-4">
+                  <div class="Our_box">
+                     <i><img src="static/images/plan3.png" alt="#"/></i>
+                     <h4>HONEYMOON</h4>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t dolor in reprehenderit in voluptate velit</p>
+                  </div>
+               </div> -->
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
+

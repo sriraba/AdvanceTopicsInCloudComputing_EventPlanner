@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>  
+      <title>event registration</title>
+      <!-- bootstrap css -->
+      <!-- <link rel="stylesheet" href="static/css/bootstrap.min.css"> -->
+      <!-- style css -->
+      <link rel="stylesheet" href="static/css/style.css">
+   
+      
+     
+   </head>
+   <body class="main-layout">      
+
+      <div id="regist" class="regist">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">                    
+                     <div class="msg">{{ message }}</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <form class="main_form" action="{{ url_for('weddingSlot') }}" method="post">
+                     <div class="row">
+                        <div class="col-md-6 ">
+                           <input class="contactus" placeholder="First Name" type="text" name="firstname">
+                        </div>
+                        <div class="col-md-6">
+                           <input class="contactus" placeholder="Last Name" type="text" name="lastname">
+                        </div>
+                        <div class="col-md-6">
+                           <input class="contactus" placeholder="Email Address" type="email" name="email">
+                        </div>
+                        <div class="col-md-6">
+                            <input class="contactus" placeholder="Phone" type="text" name="phone">
+                         </div>
+                         <div class="col-md-6">
+                            <input class="contactus" placeholder="City" type="text" name="city">
+                         </div>
+                         <div class="col-md-6">
+                            <input class="contactus" placeholder="Estimated Guest Count" type="text" name="guestcount">
+                         </div>
+                        <div class="col-md-6">
+                           <input class="contactus" placeholder="Date of The Event " type="text" name="date">
+                        </div>
+                        <div class="col-md-6">
+                            <input class="contactus" placeholder="Ideal Budget" type="text" name="budget">
+                         </div>
+                         <input type="hidden" name="event" value={{ message }}>
+                        <div class="col-sm-12">
+                           <button class="register">Book</button>
+                        </div>
+                       
+                        <div class="form-outline mb-4">
+                           <a href="{{ url_for('landing') }}"
+                               class="link-danger">Go To Home</a>
+                         </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>  
+      
+   
+   </body>
+</html>
+
